@@ -3,9 +3,7 @@ import mongoose from 'mongoose'
 
 const conn = () =>{
     mongoose.connect(process.env.DB_URI,{
-      dbName:'timerblog',
-      useNewUrlParser: true,//??
-      useUnifiedTopology:true  
+      dbName:'timerblog'  
     }).then(() => {
       console.log("Connected to the DB successfully")
     }).catch((err) =>{

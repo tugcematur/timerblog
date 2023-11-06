@@ -1,0 +1,63 @@
+<%- include('partials/_header') -%>
+
+
+
+    <%- include('partials/_menu') -%>
+
+
+        <section class="global-page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="block">
+                            <h2>LOGIN</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="container p-5 mt-5">
+            <div class="row">
+                <form action="/posts" method="POST">
+
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+
+
+                        <div class="mb-3">
+                            <input style="margin:15px;" type="text" class="form-control" name="title"
+                                placeholder="Title">
+                        </div>
+
+
+                        <div class="mb-3">
+                            <textarea style="margin:15px;" type="text" class="form-control" name="password"
+                                placeholder="Content"></textarea>
+                        </div>
+
+
+                        <div class="mb-3">
+                            <button style="margin-right:135px;" type="submit" class="btn btn-primary pull-right"
+                                style="margin-right:150px;">POST</button>
+                        </div>
+
+                        <div class="mb-3">
+                            <input  name="image" type="file"   >
+                        </div>
+
+                    </div>
+                    <div class="col-md-2"></div>
+
+                </form>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <%- include('partials/_footer') -%>

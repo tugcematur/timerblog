@@ -9,5 +9,6 @@ router.route('/contact').get(pageController.getContactPage)
 router.route('/about').get(pageController.getAboutPage)
 router.route('/login').get(pageController.getLoginPage)
 router.route('/register').get(pageController.getRegisterPage)
+router.route('/logout').get(pageController.getLogout)
 
 export default router

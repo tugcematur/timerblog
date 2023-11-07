@@ -10,7 +10,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="block">
-                            <h2>ADD POST</h2>
+                            <h2>UPDATE POST</h2>
                         </div>
                     </div>
                 </div>
@@ -20,21 +20,21 @@
 
         <div class="container p-5 mt-5">
             <div class="row">
-                <form action="/posts" method="POST" enctype="multipart/form-data">
+                <form action="/posts/<%= post._id %>/update/?_method=PUT" method="POST" enctype="multipart/form-data">
 
                     <div class="col-md-2"></div>
                     <div class="col-md-8">
 
 
                         <div class="mb-3">
-                            <input style="margin:15px;" type="text" class="form-control" name="title"
+                            <input style="margin:15px;" type="text" class="form-control" name="title" value="<%= post.title %>"
                                 placeholder="Title">
                         </div>
 
 
                         <div class="mb-3">
                             <textarea style="margin:15px;" type="text" class="form-control" name="content"
-                                placeholder="Content"></textarea>
+                                placeholder="Content"><%= post.content %></textarea>
                         </div>
 
                         <div class="mb-3">

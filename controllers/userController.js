@@ -1,13 +1,15 @@
 import User from "../models/userModel.js"
 import bcrypt from "bcrypt"
 import jwt from "jsonwebtoken"
+import Post from "../models/postModel.js"
 
 
 const createUser = async (req, res) => {
 
     try {
         const user = await User.create(req.body)
-        res.status(201).json(user)
+        //res.status(201).json(user)
+        res.redirect('/login')
     }
     catch (err) {
         res.status(500).json(err)
@@ -80,9 +82,12 @@ const createToken = (userId) => {
     })
 }
 
-const getDashboard = (req,res) =>{
+const getDashboard = async (req,res) =>{
 
-    res.render('dashboard')
+    const posts = await Post.find({user: res.locals.user._id}) 
+    res.render('dashboard',{
+        posts
+    })
 }
 
 

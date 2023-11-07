@@ -24,6 +24,10 @@ const postSchema = new Schema({
     },
     image_id:{
         type:String
+    },
+    user:{
+        type:Schema.Types.ObjectId,
+        ref: "User"
     }
     
 })
